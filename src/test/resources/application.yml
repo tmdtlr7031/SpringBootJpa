@@ -1,0 +1,22 @@
+# MVCC : 여러개 한번에 접근했을때 빨리 처리가 됨. (H2 1.4.198 부터 제거됨)
+# h2 db는 jvm 띄울때 같이 인메모리로 띄울 수 있음. (자바로 돌기 때문에..) ----> 테스트를 위해
+
+# 하지만 스프링부트를 쓰면 주석부분은 없어도됨 => 설정이 없으면 알아서 메모리모드로 실행.
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:test # 인메모리 방식
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+##        show_sql: true  : sysout으로 sql찍음
+#        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug #로거를 통해서
